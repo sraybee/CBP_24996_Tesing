@@ -20,46 +20,74 @@ jobs:
       - name: Show .gitconfig
         uses: docker://alpine:3.20
         run: |
-          echo "=== Showing global Git configuration ==="
+          echo "=== Showing .gitconfig content ==="
           cat /cloudbees/home/.gitconfig
-          echo ""
+          echo "=== End of .gitconfig ==="
 
       - name: Clone via HTTPS (no .git)
         uses: docker://alpine:3.20
         continue-on-error: true
         run: |
-          echo "=== Cloning repository via HTTPS (no .git) ==="
-          apk update && apk add git openssh-client
-          git clone https://github.com/sraybee/configure-git-credentials-v2-testing
-          echo ""
+          apk update
+          apk add git openssh-client
+          echo "=== Before clone: listing current directory ==="
           ls -l
+          echo "=== End of pre-clone listing ==="
+
+          rm -rf configure-git-credentials-v2-testing
+          git clone https://github.com/sraybee/configure-git-credentials-v2-testing
+
+          echo "=== After clone: listing updated directory ==="
+          ls -l
+          echo "=== End of post-clone listing ==="
 
 #      - name: Clone via HTTPS (.git)
 #        uses: docker://alpine:3.20
 #        continue-on-error: true
 #        run: |
-#          echo "=== Cloning repository via HTTPS (.git) ==="
-#          apk update && apk add git openssh-client
-#          git clone https://github.com/sraybee/configure-git-credentials-v2-testing.git
-#          echo ""
+#          apk update
+#          apk add git openssh-client
+#          echo "=== Before clone: listing current directory ==="
 #          ls -l
+#          echo "=== End of pre-clone listing ==="
+#
+#          rm -rf configure-git-credentials-v2-testing
+#          git clone https://github.com/sraybee/configure-git-credentials-v2-testing.git
+#
+#          echo "=== After clone: listing updated directory ==="
+#          ls -l
+#          echo "=== End of post-clone listing ==="
 
       - name: Clone via HTTP (no .git)
         uses: docker://alpine:3.20
         continue-on-error: true
         run: |
-          echo "=== Cloning repository via HTTP (no .git) ==="
-          apk update && apk add git openssh-client
-          git clone http://github.com/sraybee/configure-git-credentials-v2-testing
-          echo ""
+          apk update
+          apk add git openssh-client
+          echo "=== Before clone: listing current directory ==="
           ls -l
+          echo "=== End of pre-clone listing ==="
+
+          rm -rf configure-git-credentials-v2-testing
+          git clone http://github.com/sraybee/configure-git-credentials-v2-testing
+
+          echo "=== After clone: listing updated directory ==="
+          ls -l
+          echo "=== End of post-clone listing ==="
 
       - name: Clone via HTTP (.git)
         uses: docker://alpine:3.20
         continue-on-error: true
         run: |
-          echo "=== Cloning repository via HTTP (.git) ==="
-          apk update && apk add git openssh-client
-          git clone http://github.com/sraybee/configure-git-credentials-v2-testing.git
-          echo ""
+          apk update
+          apk add git openssh-client
+          echo "=== Before clone: listing current directory ==="
           ls -l
+          echo "=== End of pre-clone listing ==="
+
+          rm -rf configure-git-credentials-v2-testing
+          git clone http://github.com/sraybee/configure-git-credentials-v2-testing.git
+
+          echo "=== After clone: listing updated directory ==="
+          ls -l
+          echo "=== End of post-clone listing ==="
