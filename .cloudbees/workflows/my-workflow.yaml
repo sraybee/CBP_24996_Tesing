@@ -15,7 +15,7 @@ jobs:
   job-A:
     steps:
       - name: Configure Git Global Credentials
-        uses: cloudbees-io/configure-git-global-credentials@v1
+        uses: cloudbees-io/configure-git-global-credentials/.cloudbees/testing@main
 
       - name: Show .gitconfig
         uses: docker://alpine:3.20
