@@ -33,14 +33,14 @@ jobs:
 #          rm -rf configure-git-credentials-v2-testing
 #          git clone https://github.com/sraybee/configure-git-credentials-v2-testing
 
-      - name: Clone via HTTPS (.git)
-        uses: docker://alpine:3.20
-        continue-on-error: true
-        run: |
-          apk update
-          apk add git openssh-client
-          rm -rf configure-git-credentials-v2-testing
-          git clone https://github.com/sraybee/configure-git-credentials-v2-testing.git
+#      - name: Clone via HTTPS (.git)
+#        uses: docker://alpine:3.20
+#        continue-on-error: true
+#        run: |
+#          apk update
+#          apk add git openssh-client
+#          rm -rf configure-git-credentials-v2-testing
+#          git clone https://github.com/sraybee/configure-git-credentials-v2-testing.git
 
       - name: Clone via HTTP (no .git)
         uses: docker://alpine:3.20
