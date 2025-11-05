@@ -1,6 +1,6 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: workflow
-name: staged-workflow-sample
+name: staged-workflow-sample-dummy-commit
 
 permissions:
   scm-token-org: read
