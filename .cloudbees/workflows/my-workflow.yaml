@@ -16,14 +16,13 @@ jobs:
     steps:
       - name: Configure Git Global Credentials
         uses: cloudbees-io/configure-git-global-credentials/.cloudbees/testing@main
-        shell: sh
-        run: |
-          pwd
 
       - name: Show .gitconfig
         uses: docker://alpine:3.20
         run: |
           cat /cloudbees/home/.gitconfig
+          pwd
+          ls -l
 
 #      - name: Clone via HTTPS (no .git)
 #        uses: docker://alpine:3.20
