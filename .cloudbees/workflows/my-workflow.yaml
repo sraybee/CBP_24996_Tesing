@@ -16,8 +16,9 @@ jobs:
     steps:
       - name: Configure Git Global Credentials
         uses: cloudbees-io/configure-git-global-credentials/.cloudbees/testing@main
-#        with:
-#          repositories: sraybee/configure-git-credentials-v2-testing
+        shell: sh
+        run: |
+          pwd
 
       - name: Show .gitconfig
         uses: docker://alpine:3.20
