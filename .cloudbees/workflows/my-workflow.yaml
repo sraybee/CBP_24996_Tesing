@@ -14,14 +14,6 @@ on:
 jobs:
   job-A:
     steps:
-      - name: Checkout
-        uses: cloudbees-io/checkout/.cloudbees/testing@main
-
-      - name: Show .git/config
-        uses: docker://alpine:3.20
-        run: |
-          cat /cloudbees/workspace/.git/config
-
       - name: Configure Git Global Credentials
         uses: cloudbees-io/configure-git-global-credentials/.cloudbees/testing@CBP-18304
 
