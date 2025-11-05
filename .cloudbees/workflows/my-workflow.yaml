@@ -31,10 +31,10 @@ jobs:
           apk update
           apk add git openssh-client
           echo "=== Before clone: listing current directory ==="
+          rm -rf configure-git-credentials-v2-testing
           ls -l
           echo "=== End of pre-clone listing ==="
-
-          rm -rf configure-git-credentials-v2-testing
+          
           git clone https://github.com/sraybee/configure-git-credentials-v2-testing
 
           echo "=== After clone: listing updated directory ==="
@@ -48,10 +48,10 @@ jobs:
 #          apk update
 #          apk add git openssh-client
 #          echo "=== Before clone: listing current directory ==="
+#          rm -rf configure-git-credentials-v2-testing
 #          ls -l
 #          echo "=== End of pre-clone listing ==="
 #
-#          rm -rf configure-git-credentials-v2-testing
 #          git clone https://github.com/sraybee/configure-git-credentials-v2-testing.git
 #
 #          echo "=== After clone: listing updated directory ==="
@@ -65,10 +65,10 @@ jobs:
           apk update
           apk add git openssh-client
           echo "=== Before clone: listing current directory ==="
+          rm -rf configure-git-credentials-v2-testing
           ls -l
           echo "=== End of pre-clone listing ==="
 
-          rm -rf configure-git-credentials-v2-testing
           git clone http://github.com/sraybee/configure-git-credentials-v2-testing
 
           echo "=== After clone: listing updated directory ==="
@@ -82,10 +82,10 @@ jobs:
           apk update
           apk add git openssh-client
           echo "=== Before clone: listing current directory ==="
+          rm -rf configure-git-credentials-v2-testing
           ls -l
           echo "=== End of pre-clone listing ==="
 
-          rm -rf configure-git-credentials-v2-testing
           git clone http://github.com/sraybee/configure-git-credentials-v2-testing.git
 
           echo "=== After clone: listing updated directory ==="
