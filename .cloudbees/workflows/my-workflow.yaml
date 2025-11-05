@@ -30,6 +30,7 @@ jobs:
         run: |
           apk update
           apk add git openssh-client
+          rm -rf configure-git-credentials-v2-testing
           git clone https://github.com/sraybee/configure-git-credentials-v2-testing
 
       - name: Clone via HTTPS (.git)
@@ -38,6 +39,7 @@ jobs:
         run: |
           apk update
           apk add git openssh-client
+          rm -rf configure-git-credentials-v2-testing
           git clone https://github.com/sraybee/configure-git-credentials-v2-testing.git
 
       - name: Clone via HTTP (no .git)
@@ -46,7 +48,7 @@ jobs:
         run: |
           apk update
           apk add git openssh-client
-          [ -d "configure-git-credentials-v2-testing" ] && rm -rf "configure-git-credentials-v2-testing"
+          rm -rf configure-git-credentials-v2-testing
           git clone http://github.com/sraybee/configure-git-credentials-v2-testing
 
       - name: Clone via HTTP (.git)
@@ -55,5 +57,5 @@ jobs:
         run: |
           apk update
           apk add git openssh-client
-          [ -d "configure-git-credentials-v2-testing" ] && rm -rf "configure-git-credentials-v2-testing"
+          rm -rf configure-git-credentials-v2-testing
           git clone http://github.com/sraybee/configure-git-credentials-v2-testing.git
