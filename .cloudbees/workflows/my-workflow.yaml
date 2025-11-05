@@ -16,9 +16,6 @@ jobs:
     steps:
       - name: Checkout
         uses: cloudbees-io/checkout/.cloudbees/testing@main
-        with:
-          # ssh-key: ${{ secrets.ssh2 }}
-          repository: git@github.com:cb-nsrinivasa/ssh-check.git
 
       - name: Show .git/config
         uses: docker://alpine:3.20
