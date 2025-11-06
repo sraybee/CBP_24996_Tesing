@@ -15,7 +15,7 @@ jobs:
   job-A:
     steps:
       - name: Git global credentials old
-        uses: cloudbees-io/configure-git-global-credentials/.cloudbees/testing@CBP-18304
+        uses: cloudbees-io/configure-git-global-credentials/.cloudbees/testing@2bc128186ddab43f5742a0bf4c4532bc9cf23fd3
       # env:
       #   RUNNER_DEBUG: "1"
         with:
