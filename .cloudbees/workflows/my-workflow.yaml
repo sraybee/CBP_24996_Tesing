@@ -19,7 +19,7 @@ jobs:
       # env:
       #   RUNNER_DEBUG: "1"
         with:
-         repositories: https://github.com/sraybee/configure-git-credentials-v2-testing
+         repositories: https://github.com/sraybee
 
       - name: Show .gitconfig
         uses: docker://alpine:3.20
