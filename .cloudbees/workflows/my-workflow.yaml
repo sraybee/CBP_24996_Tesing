@@ -15,10 +15,10 @@ jobs:
   job-A:
     steps:
       - name: Git global credentials old
-      uses: cloudbees-io/configure-git-global-credentials/.cloudbees/testing@CBP-18304
+        uses: cloudbees-io/configure-git-global-credentials/.cloudbees/testing@CBP-18304
       # env:
       #   RUNNER_DEBUG: "1"
-      with:
+        with:
          repositories: https://github.com/sraybee/configure-git-credentials-v2-testing
 
       - name: Show .gitconfig
